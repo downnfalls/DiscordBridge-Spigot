@@ -15,7 +15,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.UUID;
 
-public class MessageReceiver implements PluginMessageListener {
+public class Messaging implements PluginMessageListener {
 
 
     @Override
@@ -42,7 +42,7 @@ public class MessageReceiver implements PluginMessageListener {
         }
     }
 
-    public void request(Player player) {
+    public static void request(Player player) {
 
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         DataOutputStream out = new DataOutputStream(stream);

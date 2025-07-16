@@ -1,7 +1,6 @@
-package me.downn_falls.discordBridge.bungee.player;
+package me.downn_falls.discordBridge.player;
 
 import com.google.gson.JsonObject;
-import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import java.util.UUID;
 

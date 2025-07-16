@@ -1,14 +1,14 @@
-package me.downn_falls.discordBridge.bungee.player;
+package me.downn_falls.discordBridge.player;
 
-import net.md_5.bungee.api.connection.ProxiedPlayer;
+import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 
 public class DiscordInformationManager {
 
-    public static final HashMap<ProxiedPlayer, DiscordInformation> DISCORD_INFORMATION = new HashMap<>();
+    public static final HashMap<Player, DiscordInformation> DISCORD_INFORMATION = new HashMap<>();
 
-    public static DiscordInformation getDiscordInformation(ProxiedPlayer player) {
+    public static DiscordInformation getDiscordInformation(Player player) {
         return DISCORD_INFORMATION.getOrDefault(player, null);
     }
 }
