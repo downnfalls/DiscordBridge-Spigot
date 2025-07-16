@@ -1,0 +1,5 @@
+name: DiscordBridge
+version: '1.0'
+main: me.downn_falls.discordBridge.DiscordBridge
+api-version: '1.20'
+authors: [ downn_falls ]
