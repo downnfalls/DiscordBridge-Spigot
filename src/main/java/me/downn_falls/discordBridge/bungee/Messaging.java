@@ -39,6 +39,15 @@ public class Messaging implements PluginMessageListener {
                     DiscordInformationManager.DISCORD_INFORMATION.put(p, new DiscordInformation(p.getUniqueId(), id, username, email, JsonParser.parseString(json).getAsJsonObject()));
                 }
             }
+        } else if (subChannel.equalsIgnoreCase("Revoke")) {
+            String status = in.readUTF();
+            if (status.equalsIgnoreCase("ok")) {
+                Player p = Bukkit.getPlayer(UUID.fromString(in.readUTF()));
+
+                if (p != null) {
+                    DiscordInformationManager.DISCORD_INFORMATION.remove(p);
+                }
+            }
         }
     }
 
